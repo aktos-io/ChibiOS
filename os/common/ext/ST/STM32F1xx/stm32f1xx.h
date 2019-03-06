@@ -127,6 +127,10 @@
   * @{
   */
 
+#if defined(STM32F103x8)
+  #define STM32F103xB // see line 90
+#endif
+
 #if defined(STM32F100xB)
   #include "stm32f100xb.h"
 #elif defined(STM32F100xE)
