@@ -128,9 +128,9 @@
 
 /* Handling a GCC problem impacting ARMv6-M.*/
 #if defined(__GNUC__) && !defined(PORT_IGNORE_GCC_VERSION_CHECK)
-#if __GNUC__ > 5
+#if __GNUC__ > 5 && __GNUC__ < 8
 #warning "This compiler has a know problem with Cortex-M0, see bugs: 88167, 88656."
-#warning "*** Use GCC version 5 or below ***"
+#warning "*** Use GCC version (5 or below) or (8 or above) ***"
 #endif
 #endif
 
